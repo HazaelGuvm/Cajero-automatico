@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="EstilosFormulario.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+    <div action=""><h1>Iniciar sesion</h1>
+        <div id="atm-container">
+        <div id="account-selection">
+            <label for="account">Selecciona cuenta</label>
+            <select id="account" class="user">
+                <option value="0">Hugo</option>
+                <option value="1">Paula</option>
+                <option value="2">Luis</option>
+                <option value="3">Franco</option>
+                <option value="4">Aylin</option>
+            </select> <br>
+
+   <div class="input-box">
+    <label for="pin">Ingresa contraseña</label>
+            <input type="pin" id="pin" class="box">
+            <p id="login-message"></p>
+
+
+
+   </div>
+    <button onclick="login()" type="submit" class="btn">Ingresar</button>
+
+</div>  
+
+<div id="actions" style="display:none;">
+    <button onclick="checkBalance()">Check Balance</button>
+    <button onclick="showDeposit()">Deposit Amount</button>
+    <button onclick="showWithdraw()">Withdraw Amount</button>
+    <button onclick="logout()">Logout</button>
+    <div id="balance" style="display:none;"></div>
+    <div id="transaction" style="display:none;">
+        <input type="number" id="amount" class="box" placeholder="Enter Amount">
+        <button onclick="performTransaction()">Submit</button>
+        <p id="transaction-message"></p>
+    </div>
+
+</div>
+
+</div>
+<script src="Java.js"></script>
+</body>
+</html>
